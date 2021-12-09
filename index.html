@@ -6,10 +6,28 @@
   <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>大屏可视化</title>
+  <script>
+    const clientWidth = document.documentElement.clientWidth
+    const clientHeight = document.documentElement.clientHeight
+
+    let pageWidth = clientWidth / clientHeight > 16 / 9 ?
+      clientHeight * (16 / 9) :
+      clientWidth
+    const pageHeight = pageWidth / (16 / 9)
+    const string = `<style>html{
+      font-size: ${pageWidth / 100}px;
+    }</style>`
+    document.write(string)
+  </script>
 </head>
 
 <body>
   <div id="root"></div>
+  <script>
+    root.style.width = pageWidth + 'px'
+    root.style.height = pageHeight + 'px'
+    root.style.marginTop = (clientHeight - pageHeight) / 2
+  </script>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
