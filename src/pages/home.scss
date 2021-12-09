@@ -8,9 +8,9 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    background-color: #010310;
     > header{
         height: px(99);
-        border: 1px solid red;
         background-size: cover;        
     }
     > main {
@@ -19,25 +19,49 @@
         grid-template: 
             "box1 box2 box4 box5" 755fr
             "box3 box3 box4 box5" 363fr / 363fr 361fr 811fr 747fr;
+        grid-column-gap: px(28);
+        grid-row-gap: px(28);
+        padding-top: px(30);
+        background-color: #0c1139;
+
+        > section {
+            border: 1px solid #0764bc;
+            border-radius: 4px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border-radius: 4px;
+
+                box-shadow: 
+                    21px 0 0  -20px #0f3361, 
+                    -21px 0 0  -20px #0f3361, 
+                    0 21px 0  -20px #0f3361, 
+                    0 -21px 0  -20px #0f3361, 
+                    11px 0 0 -10px #0d4483,
+                    -11px 0 0 -10px #0d4483,
+                    0 11px 0 -10px #0d4483,
+                    0 -11px 0  -10px #0d4483;
+            }
+        }
         > .section1 {
             grid-area: box1;
-            background-color: pink;
         }
         > .section2 {
             grid-area: box2;
-            background-color: lightgreen;
         }
         > .section3 {
             grid-area: box3;
-            background-color: lightblue;
         }
         > .section4 {
             grid-area: box4;
-            background-color: lightcyan;
         }
         > .section5 {
             grid-area: box5;
-            background-color: lightyellow;
         }
     }
 }
