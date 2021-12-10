@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>大屏可视化</title>
   <script>
-    const clientWidth = document.documentElement.clientWidth
-    const clientHeight = document.documentElement.clientHeight
+    window.clientWidth = document.documentElement.clientWidth
+    window.clientHeight = document.documentElement.clientHeight
 
-    let pageWidth = clientWidth / clientHeight > 16 / 9 ?
+    window.pageWidth = clientWidth / clientHeight > 16 / 9 ?
       clientHeight * (16 / 9) :
       clientWidth
-    const pageHeight = pageWidth / (16 / 9)
+    window.pageHeight = pageWidth / (16 / 9)
     const string = `<style>html{
       font-size: ${pageWidth / 100}px;
     }</style>`
