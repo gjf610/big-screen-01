@@ -23,6 +23,9 @@ export const Home = () => {
         <section className="bordered section4"></section>
         <section className="bordered section5"></section>
       </main>
+      <footer>
+        @guojianfeng
+      </footer>
     </div>
   );
 };
