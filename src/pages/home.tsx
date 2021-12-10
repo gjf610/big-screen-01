@@ -4,7 +4,7 @@ import headerImage from '../images/header.png'
 import * as echarts from 'echarts'
 import ReactEcharts from 'echarts-for-react';
 import { Chart1 } from "../component/chart-1";
-
+import { Chart2 } from "../component/chart-2";
 const px = (n: number) => n / 2420 * (window as any).pageWidth;
 export const Home = () => {
 
@@ -14,8 +14,11 @@ export const Home = () => {
       <main>
         <section className="section1">
           <Chart1 />
+          <Chart2 />
+
         </section>
-        <section className="bordered section2"></section>
+        <section className="bordered section2">
+        </section>
         <section className="bordered section3"></section>
         <section className="bordered section4"></section>
         <section className="bordered section5"></section>
