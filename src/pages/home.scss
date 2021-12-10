@@ -75,6 +75,9 @@
         }
         > .section2 {
             grid-area: box2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         > .section3 {
             grid-area: box3;
@@ -85,7 +88,7 @@
         > .section5 {
             grid-area: box5;
         }
-        .管辖统计, .破获排名, .趋势分析{
+        .管辖统计, .破获排名, .趋势分析, .时段分析{
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -128,6 +131,9 @@
                 background: linear-gradient(90deg, #b92ae8 0%, #6773e7 100%);
               }
             }
-          }
+        }
+        .趋势分析, .时段分析 {
+            height: px(363);
+        }
     }
 }
