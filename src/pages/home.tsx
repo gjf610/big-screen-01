@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './home.scss';
 import headerImage from '../images/header.png'
-import * as echarts from 'echarts'
-import ReactEcharts from 'echarts-for-react';
 import { Chart1 } from "../component/chart-1";
 import { Chart2 } from "../component/chart-2";
-const px = (n: number) => n / 2420 * (window as any).pageWidth;
+import { Chart3 } from "../component/chart-3";
 export const Home = () => {
 
   return (
@@ -18,6 +16,7 @@ export const Home = () => {
 
         </section>
         <section className="bordered section2">
+          <Chart3 />
         </section>
         <section className="bordered section3"></section>
         <section className="bordered section4"></section>
