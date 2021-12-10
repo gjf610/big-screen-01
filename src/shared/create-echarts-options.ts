@@ -1,7 +1,7 @@
 import { baseEchartOptions } from "./base-echarts-options"
 import { px } from "../shared/px";
 
-export const createEchartsOptions = (options) => {
+export const createEchartsOptions = (options: any) => {
     const result = {
         ...baseEchartOptions,
         ...options,
