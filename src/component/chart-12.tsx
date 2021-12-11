@@ -29,6 +29,7 @@ export const Chart12: React.FC = () => {
             itemWidth: px(10),
             itemHeight: px(10),
             formatter(name: string) {
+                // @ts-ignore
                 const value = data.find(i => i.name === name)?.value * 100 + '%';
                 return name + ' ' + value;
             }

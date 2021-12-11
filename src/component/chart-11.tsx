@@ -24,7 +24,7 @@ export const Chart11: React.FC = () => {
                 label: {
                     show: true, position: 'outside', textStyle: { color: 'white', fontSize: px(20) },
                     distanceToLabelLine: 0,
-                    formatter(item) {
+                    formatter(item: any) {
                         return item.value * 100 + '%';
                     }
                 },

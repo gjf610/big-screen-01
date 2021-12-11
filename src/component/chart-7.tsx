@@ -17,7 +17,7 @@ export const Chart7: React.FC = () => {
                 avoidLabelOverlap: false,
                 label: {
                     show: true, position: 'inside', textStyle: { color: 'white', fontSize: px(20) },
-                    formatter(item) {
+                    formatter(item: any) {
                         return item.value * 100 + '%';
                     }
                 },

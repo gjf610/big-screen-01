@@ -20,7 +20,7 @@ export const Chart1: React.FC = () => {
         { name: '兰州新区', value: 29 },
     ];
 
-    const getData = (data) => {
+    const getData = (data: DataBar) => {
         return createEchartsOptions({
             xAxis: {
                 data: data.map(i => i.name),
