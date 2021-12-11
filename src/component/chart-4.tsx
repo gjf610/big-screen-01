@@ -26,7 +26,6 @@ export const Chart4 = () => {
             },
             series: [
                 {
-                    name: '故意伤人',
                     type: 'line',
                     stack: 'Total',
                     data: [
