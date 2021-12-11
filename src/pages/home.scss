@@ -3,7 +3,12 @@
 @function px($n){
     @return $n / 2420 * 100rem
 }
-
+%legend {
+  height: px(40); display: flex; align-items: center;
+  justify-content: center; flex-wrap: wrap; padding-right: px(10);
+  > span {display: inline-block; width: px(16); height: px(10);
+    border-radius: px(2); margin: 0 px(10);}
+}
 .home {
     flex: 1;
     display: flex;
@@ -48,14 +53,14 @@
             position: relative;
             background-color: #0f113a;
             &::before {
+                pointer-events: none;
                 content: '';
                 position: absolute;
-                top: 0;
+                left: 0;
                 right: 0;
                 bottom: 0;
-                left: 0;
+                top: 0;
                 border-radius: 4px;
-
                 box-shadow: 
                     21px 0 0  -20px #0f3361, 
                     -21px 0 0  -20px #0f3361, 
@@ -157,9 +162,12 @@
         .趋势分析, .时段分析 {
             height: px(363);
         }
-        .战果对比{
+        .战果对比, .作案手段{
+            padding: 0 px(24);
             > table {
-                margin-top: px(38);
+                width: 100%; 
+                table-layout: fixed;
+                margin-top: px(25);
                 border-collapse: collapse;
                 th, td {
                   border: 1px solid #1a3671;
@@ -216,6 +224,25 @@
                     right: px(10);
                 }
             }
+        }
+        .chart11, .chart12 {
+          flex: 1;
+          display: flex; 
+          flex-direction: column;
+          > .chart {
+            display: flex;
+            > .main {flex: 1}
+          }
+          .legend {@extend %legend;}
+        }
+        .作案手段 {
+          > table {
+            tbody {
+              td {
+                height: px(26);
+              }
+            }
+          }
         }
         .年龄段 {
           display: flex;

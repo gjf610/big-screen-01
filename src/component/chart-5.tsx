@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Chart5 = () => {
+export const Chart5: React.FC = () => {
     return (
         <div className="战果对比">
             <h2>往年战果数对比</h2>
