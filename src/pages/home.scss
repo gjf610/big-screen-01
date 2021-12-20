@@ -1,7 +1,7 @@
 @import "../shared/helper";
 
 @function px($n){
-    @return $n / 2420 * 100rem
+    @return calc($n / 2420) * 100rem
 }
 %legend {
   height: px(40); display: flex; align-items: center;
